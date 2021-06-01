@@ -2,71 +2,25 @@ import React from 'react';
 import styled from 'styled-components';
 import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { selectHeader } from '../features/header/headerSlice';
-import { useSelector } from 'react-redux';
-import { useDispatch } from 'react-redux';
-import { setIsLogin } from '../features/header/headerSlice';
 
 const Header = () => {
-  const login = useSelector(selectHeader);
   const history = useHistory();
-  const dispatch = useDispatch();
 
 
   const signIn = () => {
-    dispatch(setIsLogin(true))
     history.push('/home')
   };
 
-
-  const signOut = () => {
-    history.push('/')
-  }
-
-  console.log(login)
+ 
 
   return (
     <Nav>
-      <Link to='/home'>
+      <Link to='/'>
         <Logo src='/images/logo.svg' />
       </Link>
-      {login ? (
         <LoginContainer>
           <Login onClick={signIn}>Login</Login>
         </LoginContainer>
-      ) : (
-        <>
-          <NavMenu>
-            <a>
-              <img src='/images/home-icon.svg' alt='' />
-              <span>HOME</span>
-            </a>
-            <a>
-              <img src='/images/search-icon.svg' alt='' />
-              <span>SEARCH</span>
-            </a>
-            <a>
-              <img src='/images/watchlist-icon.svg' alt='' />
-              <span>WATCHLIST</span>
-            </a>
-            <a>
-              <img src='/images/original-icon.svg' alt='' />
-              <span>ORIGINAL</span>
-            </a>
-            <a>
-              <img src='/images/movie-icon.svg' alt='' />
-              <span>MOVIES</span>
-            </a>
-            <a>
-              <img src='/images/series-icon.svg' alt='' />
-              <span>SERIES</span>
-            </a>
-          </NavMenu>
-          <LoginContainer>
-            <Login onClick={signOut}>Logout</Login>
-          </LoginContainer>
-        </>
-      )}
     </Nav>
   );
 };

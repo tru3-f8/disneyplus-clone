@@ -33,6 +33,7 @@ const Container = styled.div`
     background: no-repeat;
     background-image: url('/images/login-background.jpg');
     position: absolute;
+    height: 100vh;
     content: '';
     top: 0;
     bottom: 0;
