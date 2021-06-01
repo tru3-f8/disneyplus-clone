@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { useHistory } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { selectHeader } from '../features/header/headerSlice';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
@@ -12,18 +12,16 @@ const Header = () => {
   const history = useHistory();
   const dispatch = useDispatch();
 
-
   const signIn = () => {
-    dispatch(setIsLogin(true))
-    history.push('/home')
+    dispatch(setIsLogin(true));
+    history.push('/home');
   };
 
-
   const signOut = () => {
-    history.push('/')
-  }
+    history.push('/');
+  };
 
-  console.log(login)
+  console.log(login);
 
   return (
     <Nav>
@@ -37,10 +35,12 @@ const Header = () => {
       ) : (
         <>
           <NavMenu>
-            <a>
-              <img src='/images/home-icon.svg' alt='' />
-              <span>HOME</span>
-            </a>
+            <Link to='/home'>
+              <a>
+                <img src='/images/home-icon.svg' alt='' />
+                <span>HOME</span>
+              </a>
+            </Link>
             <a>
               <img src='/images/search-icon.svg' alt='' />
               <span>SEARCH</span>
