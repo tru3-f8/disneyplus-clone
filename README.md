@@ -1,5 +1,5 @@
 # About
-The Disney+ clone is built with React.js, CSS Stock (styled) Components, and Firebase. This website uses Google auth for authentication from Firebase. It uses Redux for state management. 
+The Disney+ clone is built with React.js, CSS Stock (styled) Components, and Firebase. It uses Redux for state management. 
 
 ## Dependencies
 react-router-dom
