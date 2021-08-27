@@ -1,7 +1,7 @@
 # About
 The Disney+ clone is built with React.js, CSS Stock (styled) Components, and Firebase. It uses Redux for managing the state between the different components in the application along with the use of useState and useEffect.
 
-## Dependencies
+## Technologies
 - react-router-dom
 - react useState and useEffect
 - react-slick
